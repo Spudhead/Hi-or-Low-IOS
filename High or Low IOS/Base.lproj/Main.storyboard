@@ -29,21 +29,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKu-Kx-obz" userLabel="LowEndTextField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Low" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKu-Kx-obz" userLabel="LowEndTextField">
                                 <rect key="frame" x="252" y="50" width="97" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="epT-zW-Xk8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ScM-vK-puv" userLabel="HiEndTextField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hi" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ScM-vK-puv" userLabel="HiEndTextField">
                                 <rect key="frame" x="394" y="50" width="97" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="DY0-z6-EIP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epG-yf-7ng">
                                 <rect key="frame" x="357" y="51" width="29" height="21"/>
@@ -51,27 +51,39 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hcq-OJ-fKg" userLabel="GuessTextField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="????" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hcq-OJ-fKg" userLabel="GuessTextField">
                                 <rect key="frame" x="252" y="84" width="97" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="XgO-5C-GY5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Xk-Fw-kyP">
-                                <rect key="frame" x="20" y="136" width="560" height="444"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTH-Rv-ORm">
                                 <rect key="frame" x="357" y="76" width="29" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="29" id="G8U-7Z-XWh"/>
                                 </constraints>
                                 <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="GoBttn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PlU-yE-U2H"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaE-Yg-42H">
+                                <rect key="frame" x="394" y="76" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="ut4-Ni-H7g"/>
+                                </constraints>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGameBttn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVo-bJ-jas"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Guess the number between hi and low." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Xk-Fw-kyP" userLabel="MessageWindow">
+                                <rect key="frame" x="20" y="136" width="560" height="444"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -89,12 +101,20 @@
                             <constraint firstItem="4Xk-Fw-kyP" firstAttribute="top" secondItem="Hcq-OJ-fKg" secondAttribute="bottom" constant="30" id="bEd-d4-3Qv"/>
                             <constraint firstItem="ScM-vK-puv" firstAttribute="leading" secondItem="epG-yf-7ng" secondAttribute="trailing" constant="8" id="ceC-7F-WjO"/>
                             <constraint firstItem="eeZ-g5-bpW" firstAttribute="bottom" secondItem="GKu-Kx-obz" secondAttribute="bottom" id="eC4-uG-eSh"/>
+                            <constraint firstItem="iaE-Yg-42H" firstAttribute="trailing" secondItem="ScM-vK-puv" secondAttribute="trailing" id="hav-4n-GNf"/>
                             <constraint firstItem="epG-yf-7ng" firstAttribute="bottom" secondItem="GKu-Kx-obz" secondAttribute="bottom" id="mlk-H9-MaZ"/>
                             <constraint firstItem="GKu-Kx-obz" firstAttribute="leading" secondItem="eeZ-g5-bpW" secondAttribute="trailing" constant="8" id="pMz-y7-gCl"/>
+                            <constraint firstItem="iaE-Yg-42H" firstAttribute="bottom" secondItem="RTH-Rv-ORm" secondAttribute="bottom" id="r9O-9G-OTW"/>
                             <constraint firstItem="S8G-KA-LTU" firstAttribute="trailing" secondItem="eeZ-g5-bpW" secondAttribute="trailing" id="uuV-eL-McP"/>
                             <constraint firstItem="Hcq-OJ-fKg" firstAttribute="leading" secondItem="GKu-Kx-obz" secondAttribute="leading" id="w01-iP-tOJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="GuessTF" destination="Hcq-OJ-fKg" id="kkZ-be-h0o"/>
+                        <outlet property="HiTF" destination="ScM-vK-puv" id="yLy-ga-ngK"/>
+                        <outlet property="LowTF" destination="GKu-Kx-obz" id="agU-Aw-3dA"/>
+                        <outlet property="MesageWindow" destination="4Xk-Fw-kyP" id="vOg-ye-IxC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
